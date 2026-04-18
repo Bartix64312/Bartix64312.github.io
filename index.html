@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bartosz Stasiak — CCNA certified Junior SOC Analyst and Security Engineer. Proxmox homelab, enterprise IAM, containerised services, and centralised monitoring.">
     <title>Bartosz Stasiak | Cybersecurity Portfolio</title>
+    
+    <meta name="description" content="Bartosz Stasiak — Junior SOC Analyst & Security Engineer. Enterprise IAM, network security, and centralized log analysis.">
+    <meta property="og:title" content="Bartosz Stasiak | Cybersecurity Portfolio">
+    <meta property="og:description" content="Building and securing enterprise-grade infrastructure. CCNA certified.">
+    <meta property="og:type" content="website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Styles separated into external sheet (separation of concerns) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,147 +30,42 @@
         </div>
 
         <nav class="links" aria-label="External profiles">
-            <a href="https://github.com/Bartix64312" target="_blank" rel="noopener noreferrer">github</a>
-            <a href="https://linkedin.com/in/bartosz-stasiak-739800198" target="_blank" rel="noopener noreferrer">linkedin</a>
-            <a href="https://github.com/Bartix64312/CV/blob/main/Bartosz_Stasiak_CV.pdf" target="_blank" rel="noopener noreferrer">resume (pdf)</a>
+            <a href="https://github.com/Bartix64312" target="_blank">github</a>
+            <a href="https://linkedin.com/in/bartosz-stasiak-739800198" target="_blank">linkedin</a>
+            <a href="mailto:contact@yourdomain.com">email</a>
         </nav>
     </header>
 
     <main id="main-content">
-
-        <section id="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">0x01 about_me</h2>
+        <section id="about">
+            <h2>0x01 about_me</h2>
             <p>
-                Second-year Cybersecurity student at AGH University, operating an enterprise-grade
-                self-hosted infrastructure on <code>Proxmox VE</code> &mdash; micro-segmented VLANs,
-                a full IAM stack with <code>Authelia</code> and <code>LLDAP</code>, mandatory 2FA/SSO,
-                and centralised observability via <code>Loki</code> and <code>Grafana</code>.
-                CCNA certified with real-world network incident diagnosis experience.
-                Actively collaborating on security research into PV inverter firmware vulnerabilities.
-                Targeting L1 SOC Analyst and Junior Security Engineer roles where hands-on
-                infrastructure and incident triage experience translate directly into value.
+                Cybersecurity student at AGH University. I specialize in building and hardening self-hosted 
+                infrastructure. My expertise lies in <strong>incident triage, IAM architecture, and network security</strong>. 
+                Currently leveraging hands-on experience with Proxmox environments and centralized log analysis to 
+                detect threats and secure enterprise-grade systems.
             </p>
         </section>
 
-        <section id="projects" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">0x02 key_projects</h2>
-
+        <section id="projects">
+            <h2>0x02 key_projects</h2>
             <div class="project">
                 <strong>Enterprise-Grade Homelab</strong> <span class="date">[2026 &mdash; active]</span>
                 <ul>
-                    <li>
-                        <strong>Architecture:</strong> <code>Proxmox VE</code> hypervisor with
-                        802.1Q VLAN micro-segmentation &mdash; management, services, and untrusted
-                        lab on isolated segments with deny-by-default inter-VLAN firewall policy.
-                    </li>
-                    <li>
-                        <strong>IAM pipeline:</strong> <code>Authelia</code> (forward-auth,
-                        mandatory 2FA/SSO) + <code>LLDAP</code> user directory, routed via
-                        <code>Nginx Proxy Manager</code> and <code>Cloudflare Tunnels</code>
-                        &mdash; zero ports exposed directly on WAN.
-                    </li>
-                    <li>
-                        <strong>Observability:</strong> <code>Prometheus</code> metrics,
-                        <code>Grafana</code> dashboards, and <code>Loki</code> log aggregation
-                        across all containerised services.
-                    </li>
-                    <li>
-                        <strong>Methodology:</strong> Infrastructure as Code principles throughout;
-                        host-level hardening and service isolation aligned with defense-in-depth.
-                    </li>
+                    <li><strong>Network:</strong> 802.1Q VLAN micro-segmentation with deny-by-default firewall policies.</li>
+                    <li><strong>IAM:</strong> Authelia (2FA/SSO) + LLDAP integrated via Cloudflare Tunnels for zero-trust access.</li>
+                    <li><strong>Blue Team Ops:</strong> Log aggregation via <code>Loki</code> and <code>Prometheus</code>. Developing custom dashboards and alerting rules to monitor for unauthorized access attempts.</li>
                 </ul>
-                <ul style="margin-top: 12px;">
-                    <li><a href="https://github.com/Bartix64312/enterprise-homelab-infrastructure" target="_blank" rel="noopener noreferrer">infrastructure &amp; configs &rarr;</a></li>
-                    <li><a href="https://github.com/Bartix64312/enterprise-homelab-infrastructure/tree/main/Security-and-Auth" target="_blank" rel="noopener noreferrer">IAM / Authelia configs &rarr;</a></li>
-                    <li><a href="https://github.com/Bartix64312/enterprise-homelab-infrastructure/tree/main/Monitoring-and-Logs" target="_blank" rel="noopener noreferrer">monitoring stack &rarr;</a></li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <strong>PV Inverter Security Research</strong> <span class="date">[CIPHER Club &mdash; 2026]</span>
-                <p>
-                    Penetration testing and firmware analysis of industrial IoT devices under the
-                    AGH CIPHER student security research club. Specifically targeting
-                    hardcoded credentials, unauthenticated API endpoints, and unencrypted
-                    Modbus/SunSpec communication channels common in solar inverter firmware &mdash;
-                    vulnerability classes with direct impact on grid-connected critical infrastructure.
-                </p>
-            </div>
-        </section>
-
-        <section id="certs" aria-labelledby="certs-heading">
-            <h2 id="certs-heading">0x03 certifications</h2>
-            <ul>
-                <li>Cisco Certified Network Associate (CCNA)</li>
-                <li>CompTIA Security+</li>
-                <li>Cyber.Mil Academy &mdash; Ministry of National Defence (Poland)</li>
-            </ul>
-        </section>
-
-        <section id="experience" aria-labelledby="experience-heading">
-            <h2 id="experience-heading">0x04 professional_experience</h2>
-
-            <div class="exp">
-                <strong>Ministry of Digital Affairs (Poland)</strong> | Intern
-                <span class="date">[2025]</span>
-                <ul class="exp-details">
-                    <li>Audited organisational security policies and network access controls.</li>
-                    <li>Monitored network traffic and analysed security events within internal infrastructure.</li>
-                    <li>Automated XML data import pipelines, reducing manual processing time by
-                        approximately <strong>~6 hours per month</strong> and improving data integrity
-                        on the national open data portal (dane.gov.pl).</li>
-                    <li>Managed access permissions for <strong>~30 user accounts</strong>
-                        on the open data portal.</li>
-                </ul>
-            </div>
-
-            <div class="exp">
-                <strong>Dr Irena Eris</strong> | Helpdesk Technician
-                <span class="date">[03/2023 &mdash; 09/2023, Piaseczno]</span>
-                <ul class="exp-details">
-                    <li>Resolved approximately <strong>~15 incidents per month</strong> as
-                        first-line support, maintaining LAN infrastructure continuity with
-                        consistent SLA adherence.</li>
-                    <li>Managed Active Directory (2019) user lifecycles for
-                        <strong>~120 accounts</strong>, enforcing least privilege across
-                        the organisation.</li>
-                    <li>Diagnosed and resolved LAN infrastructure incidents &mdash; physical-layer
-                        faults, VLAN misconfigurations, and AD permission escalations.</li>
-                    <li>Configured and troubleshot secure remote access (VPN) for enterprise users;
-                        maintained detailed incident records in the ticketing system.</li>
+                <ul class="mt-sm">
+                    <li><a href="https://github.com/Bartix64312/enterprise-homelab-infrastructure" target="_blank">infrastructure &amp; configs &rarr;</a></li>
                 </ul>
             </div>
         </section>
 
-        <section id="skills" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">0x05 tech_stack</h2>
-            <div class="tech-tags">
-                <code>Linux</code>
-                <code>Python</code>
-                <code>Bash</code>
-                <code>Proxmox VE</code>
-                <code>Docker</code>
-                <code>Authelia</code>
-                <code>LLDAP</code>
-                <code>Nginx Proxy Manager</code>
-                <code>Prometheus</code>
-                <code>Grafana</code>
-                <code>Loki</code>
-                <code>Active Directory</code>
-                <code>TCP/IP</code>
-                <code>VLANs (802.1Q)</code>
-                <code>VPN</code>
-                <code>Cloudflare Tunnels</code>
-                <code>Tailscale</code>
-                <code>Cisco IOS</code>
-            </div>
-        </section>
-
-    </main>
+        </main>
 
     <footer>
-        [ built with raw html/css ]
+        [ raw html/css ]
     </footer>
-
 </body>
 </html>
